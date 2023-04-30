@@ -1,0 +1,45 @@
+* {
+  font-family: "Press Start 2P", cursive;
+}
+h1 {
+  text-align: center;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  width: 70%;
+  height: 600px;
+  margin: auto;
+}
+.gameboard {
+  border: solid 2px black;
+  height: 100%;
+  width: 50%;
+  margin: auto;
+}
+.right-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: solid 2px black;
+}
+li {
+  margin-bottom: 25%;
+}
+ul {
+  list-style: none;
+}
+button {
+  background-color: #4caf50;
+  font-size: 16px;
+  padding: 12%;
+  cursor: pointer;
+}
+h2 {
+  text-align: center;
+}
+#canvas
+{
+    z-index: auto;
+}
+
