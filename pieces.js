@@ -1,21 +1,17 @@
 class Piece {
     constructor(context)
     {
+        this.newpiece = pieces[Math.floor(Math.random()*pieces.length)];
         this.context = context;
         this.x = 3;
         this.y = 0;
-        this.color = 'blue'
-        this.shape = [
-        [0,1,0],
-        [0,1,0],
-        [0,1,0]
-        ];
-    }
-    pieces = ['t','o','l', 'j','i','s','z',]
-    //piece = MakePiece(pieces[Math.floor(Math.random()*pieces.length)]);
+        this.color = this.newpiece.color;
+        this.shape = this.newpiece.shape;
+    };
 
     Draw()
     {
+        console.log(this.newpiece)
         this.context.fillStyle = this.color;
         this.shape.forEach((row, y)=> {
             row.forEach((value, x) => {

@@ -19,18 +19,23 @@ document.addEventListener('keydown', event => {
         console.log(p.x)
         console.log(event.keyCode)
         console.log('event triggered')
-          piece.move(p);
-          context.clearRect(0, 0, board.width, board.height); 
-          piece.Draw();
-      }
+        if (!DetectCollision(piece, gameboard.grid))
+        {    
+            piece.move(p);
+            context.clearRect(0, 0, board.width, board.height); 
+            piece.Draw();
+        }   
+        else
+        {
+            console.log("not allowed to move")
+        }
+         
+      } 
     })
-
-
-
+    
 function Play()
 {
     console.table(gameboard.grid);
-    
     piece.Draw();
 }
 
