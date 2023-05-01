@@ -9,6 +9,6 @@ class Board {
             {length: rows}, () => Array(cols).fill(0) 
             );
         }
-}
+    }
 
 

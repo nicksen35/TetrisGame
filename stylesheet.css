@@ -40,6 +40,6 @@ h2 {
 }
 #canvas
 {
-    z-index: auto;
+    z-index: -999;
 }
 
