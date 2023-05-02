@@ -17,8 +17,6 @@ document.addEventListener('keydown', event => {
         event.preventDefault();
         let p = movements[event.keyCode](piece);
         console.log(p.x)
-        console.log(event.keyCode)
-        console.log('event triggered')
         if (!DetectCollision(piece, gameboard.grid))
         {    
             piece.move(p);

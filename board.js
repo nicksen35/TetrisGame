@@ -12,7 +12,6 @@ class Board {
     }
 function DetectCollision(piece, board)
 {
-    console.log(piece.newpiece.shape.length)
     for (let row = 0; row < piece.newpiece.shape.length; row++)
     {
         for(let col=0; col < piece.newpiece.shape[row].length; col++)
@@ -20,7 +19,8 @@ function DetectCollision(piece, board)
             const boardrow = piece.y + row;
             const boardcolumn = piece.x + col;
             console.log(boardrow, board.length, board[0].length, boardcolumn);
-            if (boardrow < 0 || boardrow >= board.length || boardcolumn <= 0 || boardcolumn >= board[0].length)
+            console.log(board[0].length - piece.width)
+            if (boardrow < 0 || boardrow >= board.length - 1 || boardcolumn <= 0 || boardcolumn >= board[0].length - piece.width + piece.boundary)
             {
                 return true;
             }

@@ -1,5 +1,5 @@
 const cols = 10;
-const rows = 20;
+const rows = 19;
 const blocksize = 30;
 const key = {
     left: 37,
@@ -14,7 +14,8 @@ const pieces = [
       shape: [
         [1, 1, 1, 1]
       ],
-      color: 'cyan'
+      color: 'cyan',
+      boundary: 3
     },
     {
       label: 'J',
@@ -22,7 +23,8 @@ const pieces = [
         [0, 0, 2],
         [2, 2, 2]
       ],
-      color: 'blue'
+      color: 'blue',
+      boundary: 2
     },
     {
       label: 'L',
@@ -30,7 +32,8 @@ const pieces = [
         [3, 0, 0],
         [3, 3, 3]
       ],
-      color: 'orange'
+      color: 'orange',
+      boundary: 2
     },
     {
       label: 'O',
@@ -38,7 +41,8 @@ const pieces = [
         [4, 4],
         [4, 4]
       ],
-      color: 'yellow'
+      color: 'yellow',
+      boundary: 1
     },
     {
       label: 'S',
@@ -46,7 +50,8 @@ const pieces = [
         [0, 5, 5],
         [5, 5, 0]
       ],
-      color: 'green'
+      color: 'green',
+      boundary: 1
     },
     {
       label: 'T',
@@ -54,7 +59,8 @@ const pieces = [
         [0, 6, 0],
         [6, 6, 6]
       ],
-      color: 'purple'
+      color: 'purple',
+      boundary: 2
     },
     {
       label: 'Z',
@@ -62,7 +68,8 @@ const pieces = [
         [7, 7, 0],
         [0, 7, 7]
       ],
-      color: 'red'
+      color: 'red',
+      boundary: 1
     }
   ];
   
