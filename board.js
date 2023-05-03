@@ -20,14 +20,22 @@ function DetectCollision(piece, board)
             const boardcolumn = piece.x + col;
             console.log(boardrow, board.length, board[0].length, boardcolumn);
             console.log(board[0].length - piece.width)
-            if (boardrow < 0 || boardrow >= board.length - 1 || boardcolumn <= 0 || boardcolumn >= board[0].length - piece.width + piece.boundary)
+            if (boardrow < 0 || boardrow >= board.length - 1 )
             {
                 return true;
             }
-            if (piece.newpiece.shape[row][col] && board[boardrow][boardcolumn])
+            else if (boardcolumn >= board[0].length - piece.width + piece.boundary)
             {
-                return true;
+                return piece.x  = board[0].length - piece.width + piece.boundary;
             }
+            else if (boardcolumn <= 0)
+            {
+                return piece.x = 0;
+            }
+            //else if (piece.newpiece.shape[row][col] && board[boardrow][boardcolumn])
+            //{
+                //return true;
+            //}
         }
         
     }
