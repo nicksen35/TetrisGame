@@ -18,19 +18,17 @@ function DetectCollision(piece, board)
         {
             const boardrow = piece.y + row;
             const boardcolumn = piece.x + col;
-            console.log(boardrow, board.length, board[0].length, boardcolumn);
-            console.log(board[0].length - piece.width)
             if (boardrow < 0 || boardrow >= board.length - 1 )
             {
                 return true;
             }
-            else if (boardcolumn >= board[0].length - piece.width + piece.boundary)
+            else if (boardcolumn == board[0].length - piece.width + piece.boundary)
             {
-                return piece.x  = board[0].length - piece.width + piece.boundary;
+                return piece.x = boardcolumn-piece.boundary;
             }
-            else if (boardcolumn <= 0)
+            else if (boardcolumn < 1)
             {
-                return piece.x = 0;
+                return piece.x = 1;
             }
             //else if (piece.newpiece.shape[row][col] && board[boardrow][boardcolumn])
             //{

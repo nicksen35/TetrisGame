@@ -16,8 +16,11 @@ document.addEventListener('keydown', event => {
     if (movements[event.keyCode]) {  
         event.preventDefault();
         let p = movements[event.keyCode](piece);
-        console.log(p.x)
-        if (!DetectCollision(piece, gameboard.grid))
+        piece.move(p);
+        context.clearRect(0, 0, board.width, board.height); 
+        piece.Draw();
+        DetectCollision(piece, gameboard.grid)
+        /* if (!DetectCollision(piece, gameboard.grid))
         {    
             piece.move(p);
             context.clearRect(0, 0, board.width, board.height); 
@@ -27,6 +30,7 @@ document.addEventListener('keydown', event => {
         {
             console.log("not allowed to move")
         }
+        */
          
       } 
     })
